@@ -59,3 +59,12 @@ export function createTicketWithTicketType() {
     },
   };
 }
+
+export function createTicketMock() {
+  return {
+    id: 1,
+    ticketTypeId: 1,
+    enrollmentId: 1,
+    status: 'PAID',
+  };
+}
