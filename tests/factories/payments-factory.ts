@@ -23,3 +23,7 @@ export function generateCreditCardData() {
     cvv: faker.datatype.number({ min: 100, max: 999 }).toString(),
   };
 }
+
+export function createPaymentMock() {
+  return { id: 1, ticketId: 1, value: 1, cardIssuer: '987654321', cardLastDigits: '321' };
+}
