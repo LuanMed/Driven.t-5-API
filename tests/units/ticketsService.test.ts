@@ -83,9 +83,7 @@ describe('createTicket', () => {
   });
 
   it('should return notFoundError if there is no enrollment', () => {
-    jest
-      .spyOn(enrollmentRepository, 'findWithAddressByUserId')
-      .mockImplementationOnce((): any => createEnrollmentMock());
+    jest.spyOn(enrollmentRepository, 'findWithAddressByUserId').mockImplementationOnce((): any => undefined);
 
     const promise = ticketService.createTicket(1, 1);
 
