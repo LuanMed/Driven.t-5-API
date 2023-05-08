@@ -45,8 +45,8 @@ async function changeBookingRoomById(userId: number, roomId: number) {
   if (!roomId) throw badRequestError();
 
   await checkValidBooking(roomId);
-  const booking = await bookingRepository.findByUserId(userId);
 
+  const booking = await bookingRepository.findByUserId(userId);
   if (!booking || booking.userId !== userId) throw cannotBookingError();
 
   return bookingRepository.upsertBooking({

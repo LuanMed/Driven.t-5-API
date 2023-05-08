@@ -34,3 +34,18 @@ export function getBookingReturn() {
   };
   return booking;
 }
+
+export function createBookingWithoutDate() {
+  const booking: any = {
+    id: 1,
+    userId: 1,
+    roomId: 1,
+    Room: {
+      id: 1,
+      name: 'Room 1',
+      capacity: 2,
+      hotelId: 1,
+    },
+  };
+  return booking;
+}

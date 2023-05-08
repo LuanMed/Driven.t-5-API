@@ -20,3 +20,12 @@ export async function createRoomWithHotelId(hotelId: number) {
     },
   });
 }
+
+export function createRoomMock() {
+  return {
+    id: 1,
+    name: '1020',
+    capacity: 3,
+    hotelId: 1,
+  };
+}
