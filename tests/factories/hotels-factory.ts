@@ -21,11 +21,35 @@ export async function createRoomWithHotelId(hotelId: number) {
   });
 }
 
+export function createHotelMock() {
+  return {
+    id: 1,
+    name: '1020',
+    image: 'imageurl.com',
+  };
+}
+
 export function createRoomMock() {
   return {
     id: 1,
     name: '1020',
     capacity: 3,
     hotelId: 1,
+  };
+}
+
+export function createHotelWithRoomMock() {
+  return {
+    id: 1,
+    name: '1020',
+    image: 'imageurl.com',
+    Rooms: [
+      {
+        id: 1,
+        name: '1020',
+        capacity: 3,
+        hotelId: 1,
+      },
+    ],
   };
 }
